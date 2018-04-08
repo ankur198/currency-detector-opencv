@@ -24,9 +24,9 @@ max_kp = 0
 orb = cv2.ORB_create()
 # orb is an alternative to SIFT
 
-#test_img = read_img('files/test_100_2.jpg')
+test_img = read_img('files/test_100_2.jpg')
 #test_img = read_img('files/test_50_2.jpg')
-test_img = read_img('files/test_20_2.jpg')
+#test_img = read_img('files/test_20_2.jpg')
 #test_img = read_img('files/test_100_3.jpg')
 #test_img = read_img('files/test_20_4.jpg')
 
@@ -74,12 +74,13 @@ if max_val != 8:
 	note = str(training_set[max_pt])[6:-4]
 	print('\nDetected denomination: Rs. ', note)
 
-	audio_file = 'audio/' + note + '.mp3'
+	audio_file = '/audio/' + note + '.mp3'
 
 	# audio_file = "value.mp3
 	# tts = gTTS(text=speech_out, lang="en")
 	# tts.save(audio_file)
-	return_code = subprocess.call(["afplay", audio_file])
+	#print(audio_file)
+	#return_code = subprocess.call(["afplay", audio_file])
 
 	(plt.imshow(img3), plt.show())
 else:
